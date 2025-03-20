@@ -1,7 +1,10 @@
 # Actividad 1: Juego Pintando.
 Master Role: Santiago Ramírez Niño - A01665906.
-Fork Role: Gabriel Gutiérrez Guerra - A.
+
+Fork Role: Gabriel Gutiérrez Guerra - A01660505.
+
 Semana Tec "Herramientas Computacionales: El Arte de la Programación".
+
 Profesor: Artemio Urbina García.
 
 El siguiente código utiliza la librería freegames, desde un entorno virtual para correr todo sin problemas de versiones.
