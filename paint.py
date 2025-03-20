@@ -1,5 +1,6 @@
 from turtle import *
 from freegames import vector
+from math import pi, sin, cos
 
 def line(start, end):
     "Draw line from start to end."
@@ -22,8 +23,21 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    "Draw circle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    radius = abs(end.x - start.x)
+    steps = 100
+    angle_step = 2 * pi / steps
+
+    for i in range(steps):
+        x = start.x + radius * cos(i * angle_step)
+        y = start.y + radius * sin(i * angle_step)
+        goto(x, y)
+
+    end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -83,4 +97,9 @@ onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
+onkey(lambda: color('yellow'), 'Y')
 done()
+
+def main():
+    rectangle(2,2)
+
